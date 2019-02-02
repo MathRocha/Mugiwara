@@ -1,0 +1,7 @@
+<div>
+  <app-crew-list (emitClick)="clickReceiver($event)"></app-crew-list>
+  
+  <div *ngIf="showDetail">
+    <app-crew-detail [crewMember]="crewMember"></app-crew-detail>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="row no-gutters">
+  <div class="col-sm" *ngFor="let crewMember of crew">
+    <img
+      (click)="toggleDetail(crewMember)"
+      class="img-thumbnail"
+      [src]="crewMember.img"
+      [alt]="crewMember.name"
+    >
+  </div>
+</div>

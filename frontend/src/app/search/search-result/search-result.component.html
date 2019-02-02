@@ -1,0 +1,12 @@
+<div class="row" *ngFor="let result of searchResult; index as i">
+  <div class="col-sm" *ngFor="let item of result.items">
+    <img
+      class="img-thumbnail"
+      [src]="item.image.thumbnailLink"
+      (click)="selectPhoto(item, i)"
+    >
+  </div>
+  <div class="row" *ngIf="selectedItem && i == rowNumber">
+    <app-photo [item]="selectedItem"></app-photo>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.detail {
+  height: 60vh;
+}
+
+.detail-img {
+  float: left;
+  display: block;
+}
+
+p {
+  white-space: pre-wrap;
+}

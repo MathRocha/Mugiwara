@@ -1,0 +1,16 @@
+<div>
+  <div class="mb-3">
+    <app-crew-detail [crewMember]="crewMember"></app-crew-detail>
+  </div>
+  
+  <div class="text-center" *ngIf="searchResult.length > 0">
+    <app-search-result [searchResult]="searchResult"></app-search-result>
+    <button
+      type="button"
+      class="btn btn-primary mt-1"
+      *ngIf="searchResult.length < 10"
+      (click)="debounce.next($event.target.value)">
+        Search more
+    </button>
+  </div>
+</div>
